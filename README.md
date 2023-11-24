@@ -11,16 +11,14 @@ Provides a template to be used for "composer create-project" to:
 
 ## How to
 
-```
-## Initialize example directory and enter it.
-mkdir my-tdk-demo && chdir my-tdk-demo
+### Create from scratch
 
+```
 ## Initialize a composer project by using a boilerplate
 composer create-project --stability dev garvinhicking/tdk-project my-tdk-demo 
 
-## Install the required modules WITHOUT DEV FIRST (see note)
-## !!!VERY IMPORTANT!!!
-composer install --no-dev
+## Change to the new directory
+chdir my-tdk-demo
 
 ## Now you can install the actual TYPO3-cms packages as a 
 ## dev-dependency (you are actually using a dev-setup, so
@@ -29,6 +27,28 @@ composer install --no-dev
 ## locked versions of the PACKAGIST, so we actually
 ## run "composer update" at this point to both update
 ## and install the local packages. Sounds confusing? Yes. It is.
+composer update
+```
+
+### Create from existing repository
+
+The project created via the method above can be committed to your own repository.
+You can then clone your directory and set it up with the TYPO3-core via:
+
+```
+## Clone your repository (can be anything, must not be GitHub)
+git clone git@github.com:your-vendor/your-repo.git my-tdk-demo
+
+## Change to directory
+cd my-tdk-demo
+
+## Install the required modules WITHOUT DEV FIRST (see note)
+## !!!VERY IMPORTANT!!!
+composer install --no-dev
+
+## That will have then checked out your sources. Now you should
+## be able to update composer and install the dev-dependencies
+## properly.
 composer update
 ```
 
