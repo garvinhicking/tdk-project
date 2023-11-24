@@ -1,0 +1,36 @@
+{
+  "name": "garvinhicking/tdk-project",
+  "description": "TYPO3 Composer Development Kit: Project-Template",
+  "type": "project",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Jochen Roth",
+      "email": "jochen.roth@b13.com"
+    },
+    {
+      "name": "Garvin Hicking",
+      "email": "blog@garv.in"
+    }
+ ],
+  "repositories": {
+    "local-packages": {
+      "type": "path",
+      "url": "packages/*"
+    }
+  },
+  "require": {
+    "garvinhicking/tdk-core": "@dev",
+    "garvinhicking/tdk-cli": "@dev"
+  },
+  "require-dev": {
+    "composer/composer": "^2.6"
+  },
+  "config": {
+    "allow-plugins": {
+      "typo3/class-alias-loader": true,
+      "typo3/cms-composer-installers": true,
+      "garvinhicking/tdk-project": true
+    }
+  }
+}
