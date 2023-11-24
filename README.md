@@ -52,7 +52,37 @@ composer install --no-dev
 composer update
 ```
 
+### Follow-up: DDEV
 
+This project also provides a default DDEV configuration.
+
+You can use `ddev start` to start it.
+
+There is basic configuration provided with the tdk-project dummy,
+but you'll need to initialize the database. This is done
+easiest via `ddev ssh` and then:
+
+```
+  TYPO3_DB_DRIVER=mysqli \
+  TYPO3_DB_USERNAME=db \
+  TYPO3_DB_PORT=3306 \
+  TYPO3_DB_HOST=db \
+  TYPO3_DB_DBNAME=db \
+  TYPO3_DB_PASSWORD=db \
+  TYPO3_SETUP_ADMIN_PASSWORD="SuperDuper0815." \
+  TYPO3_SETUP_ADMIN_EMAIL=admin@example.com \
+  TYPO3_SETUP_ADMIN_USERNAME=admin \
+  TYPO3_SETUP_CREATE_SITE="https://tdk-project.ddev.site/" \
+  TYPO3_PROJECT_NAME="TYPO3 Development Kit" \
+  TYPO3_SERVER_TYPE="apache" \
+  ./vendor/bin/typo3 setup --force
+```
+
+If you spin-off your own project, you should:
+
+* Edit `.ddev/config.yaml` and configure your own hostname
+* Provide your own `config/sites/tdk-project/` Site configuration
+* Provide your own `config/system/*.php` Core configuration
 
 ## Notes
 

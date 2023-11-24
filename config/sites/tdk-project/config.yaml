@@ -1,0 +1,3 @@
+base: 'https://tdk-project.ddev.site/'
+rootPageId: 1
+websiteTitle: 'TYPO3 Development Kit Page'
