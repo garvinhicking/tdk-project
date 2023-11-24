@@ -25,7 +25,11 @@ composer install --no-dev
 ## Now you can install the actual TYPO3-cms packages as a 
 ## dev-dependency (you are actually using a dev-setup, so
 ## in my world, you're good!)
-composer install
+## Using "composer install" at this point would install
+## locked versions of the PACKAGIST, so we actually
+## run "composer update" at this point to both update
+## and install the local packages. Sounds confusing? Yes. It is.
+composer update
 ```
 
 

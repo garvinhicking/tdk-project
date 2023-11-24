@@ -20,7 +20,7 @@
         },
         "typo3-core": {
             "type": "path",
-            "url": "typo3-core/*"
+            "url": "typo3-core/typo3/sysext/*"
         },
         "packagist": {
             "type": "composer",

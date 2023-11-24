@@ -1,4 +1,4 @@
 vendor/
 typo3-core/*
 public/
-!typo3-core/composer-repository.bak
+!typo3-core/typo3/sysext/composer-repository.bak
