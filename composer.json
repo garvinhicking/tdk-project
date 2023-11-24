@@ -36,5 +36,8 @@
             "typo3/cms-composer-installers": true,
             "garvinhicking/tdk-core": true
         }
-    }
+    },
+    "bin": [
+        "vendor/bin"
+    ]
 }
