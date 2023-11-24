@@ -3,11 +3,19 @@
 Provides a template to be used for "composer create-project" to:
 
 * Create your own project
-* Utilize tdk-core and tdk-cli
+* Utilize [tdk-core](https://github.com/garvinhicking/tdk-core) and [tdk-cli](https://github.com/garvinhicking/tdk-cli)
 * Deliver SQL dumps and custom packages
 * Have the normal ddev and composer experience
 * Enjoy life
 * Have some kids
+
+This work is based on the shoulders of giants:
+
+* [ochorocho/tdk](https://github.com/ochorocho/tdk)
+* [helhum/composer-mono](https://github.com/helhum/composer-mono)
+
+Thanks to Jochen Roth, Stefan Bürk, Andreas Wolf (and unbeknownst Helmut Hummel) 
+for bearing with me, talking about this idea time and again. ;)
 
 ## How to
 
