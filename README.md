@@ -16,7 +16,7 @@ Provides a template to be used for "composer create-project" to:
 mkdir my-tdk-demo && chdir my-tdk-demo
 
 ## Initialize a composer project by using a boilerplate
-composer create-project garvinhicking/tdk-project
+composer create-project --stability dev garvinhicking/tdk-project my-tdk-demo 
 
 ## Install the required modules WITHOUT DEV FIRST (see note)
 ## !!!VERY IMPORTANT!!!
