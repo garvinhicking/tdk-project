@@ -1,4 +1,5 @@
 vendor/
 typo3-core/*
 public/
+composer.lock
 !typo3-core/typo3/sysext/composer-repository.bak
