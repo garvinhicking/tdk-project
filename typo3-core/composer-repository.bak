@@ -1,0 +1,13 @@
+This is an initialization file.
+
+The directory `typo3-core` is mandatory, because this will receive the
+GIT working directory of TYPO3.
+
+It is listed as a local "repository" inside composer.json.
+
+This is the only file that is allowed to be versioned. Only if it is the
+only file in this directory, the tdk-core composer-plugin is able to
+check out the GIT sources into this directory.
+
+This file is called "composer-repository.bak" because the TYPO3-core lists 
+`*.bak` as gitignored files.
