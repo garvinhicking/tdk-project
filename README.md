@@ -84,6 +84,47 @@ If you spin-off your own project, you should:
 * Provide your own `config/sites/tdk-project/` Site configuration
 * Provide your own `config/system/*.php` Core configuration
 
+## Just do it
+
+You should now have a working TYPO3 environment with backend and frontend.
+
+Your directory `typo3-core` is a distinct GIT working directory.
+
+You can go to that directory and perform usual `git` operations, like
+pulling, cherry-picking.
+
+You could theoretically also change branches, but you will have to adjust
+your composer.json then to reflect version numbers. This repository is
+aimed at `main` development (currently: TYPO3 v13).
+
+After using `git pull` to update to the most recent TYPO3 changes, you
+should maybe also run `composer update` in your root directory. This
+allows you to be sure that dependencies can be resolved.
+
+Within the `typo3-core` directory you can ALSO run a `composer install`
+so that all development packages are installed within that tree. This will
+allow you to run usual developer tasks, like the `Build/Scripts/runTests.sh`
+script together with `phpstan` etc.
+
+When you contribute to the TYPO3-core like that, you can use your working
+directory within this project. Just remember that you need to operate GIT
+within that `typo3-core` directory. If you operate GIT outside that directory,
+you are doing changes to the `tdk-project`-specific directory. This one never
+holds TYPO3-specific core information, it's only a wrapper so that you can
+utilize `TYPO3` in composer mode.
+
+The largest benefit is that you can put custom extensions into the `/packages/`
+subdirectory, and require those with `composer` (in your project root, not
+the `typo3-core` subdirectory). These extensions will then be available 
+in your TYPO3-Installation.
+
+And it allows you to store these extension in the main project repository,
+so other people can easily check out aspects of the `TYPO3 Core` with your
+extension provided.
+
+You can also add custom `SQL dump` files to this repository and allow easy
+(re)import via `ddev import-db` (and `ddev export-db`).
+
 ## Notes
 
 Currently a nasty workaround is employed that tries to solve a
@@ -107,7 +148,6 @@ Surely there's a better way for it. I just haven't found that yet. Help! :-)
 
 ## TODO
 
-* .ddev config
 * CLI asking which extensions to be loaded
 * add githooks
 * add git commit template
